@@ -34,5 +34,6 @@ return [
     'companies_api' => [
         'access_token' => env('COMPANIES_ACCESS_TOKEN'),
         'uri' => env('COMPANIES_URI'),
+        'x-client_header' => env('X_CLIENT_HEADER_VALUE'),
     ],
 ];

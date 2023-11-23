@@ -27,4 +27,13 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $e)
+    {
+        if ($e instanceof InvalidXClientHeaderException) {
+            return response()->json(['data' => ['error' => $e->getMessage(), 'code' => $e->getCode()]]);
+        }
+
+        return parent::render($request, $e);
+    }
 }
