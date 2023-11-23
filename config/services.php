@@ -31,4 +31,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'companies_api' => [
+        'access_token' => env('COMPANIES_ACCESS_TOKEN'),
+        'uri' => env('COMPANIES_URI'),
+    ],
 ];
